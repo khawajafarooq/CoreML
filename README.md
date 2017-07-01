@@ -1,14 +1,13 @@
 # CoreML
-This app predicts dominant object(s) inside an image using Core ML framework using InceptionV3 model. InceptionV3 is object classification model introduced by Apple on [WWDC 2017](https://developer.apple.com/machine-learning/).
+This app predicts dominant object(s) inside an image using Core ML framework. For current example, I have used an opensource ml model **InceptionV3** which is used for object classification introduced by Apple in [WWDC 2017](https://developer.apple.com/machine-learning/).
 
 ## Setup
 1. Download the Inception V3 model from [here](https://docs-assets.developer.apple.com/coreml/models/Inceptionv3.mlmodel)
-2. [Drag & drop the model into project resrouces](https://developer.apple.com/documentation/coreml/integrating_a_core_ml_model_into_your_app)
+2. Drag & drop the model into [project resrouces](https://developer.apple.com/documentation/coreml/integrating_a_core_ml_model_into_your_app)
 ![Alt text](/screenshots/sc-2.png?raw=true "Drag & Drop at MLTest-CodeML/Resources/")
 
 ## Demo
 ![Alt text](/screenshots/sc-1.png?raw=true "Top 5 dominant objects predicted by CoreML")
 
 ## Compatibility
-
 Verified that this repository's code works in XCode 9.0 beta with Swift 4.0
