@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0313515B1F00391A00750619 /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0313515A1F00391A00750619 /* Prediction.swift */; };
-		0346CFE51F004365008E6C42 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0346CFE41F004364008E6C42 /* Inceptionv3.mlmodel */; };
 		0346CFE71F0043BD008E6C42 /* img6.png in Resources */ = {isa = PBXBuildFile; fileRef = 0346CFE61F0043A0008E6C42 /* img6.png */; };
+		035C30F31F0777B60093F287 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 035C30F21F0777B60093F287 /* Inceptionv3.mlmodel */; };
 		038020521EFFC7D1002ACB93 /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0380204F1EFFC727002ACB93 /* img1.png */; };
 		038020531EFFC7D1002ACB93 /* img2.png in Resources */ = {isa = PBXBuildFile; fileRef = 038020501EFFC727002ACB93 /* img2.png */; };
 		038020541EFFC7D1002ACB93 /* img3.png in Resources */ = {isa = PBXBuildFile; fileRef = 038020511EFFC727002ACB93 /* img3.png */; };
@@ -25,8 +25,8 @@
 
 /* Begin PBXFileReference section */
 		0313515A1F00391A00750619 /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
-		0346CFE41F004364008E6C42 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Inceptionv3.mlmodel; path = ../../../../CoreMLUnsplash/UnsplashExplorer/Resources/Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		0346CFE61F0043A0008E6C42 /* img6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img6.png; sourceTree = "<group>"; };
+		035C30F21F0777B60093F287 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Inceptionv3.mlmodel; path = ../../../../Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		0380204F1EFFC727002ACB93 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img1.png; sourceTree = "<group>"; };
 		038020501EFFC727002ACB93 /* img2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img2.png; sourceTree = "<group>"; };
 		038020511EFFC727002ACB93 /* img3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img3.png; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		0380204B1EFFC5BF002ACB93 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0346CFE41F004364008E6C42 /* Inceptionv3.mlmodel */,
+				035C30F21F0777B60093F287 /* Inceptionv3.mlmodel */,
 				03A474671EF1ABAD00E393E0 /* Main.storyboard */,
 				03A4746A1EF1ABAD00E393E0 /* Assets.xcassets */,
 				03A4746C1EF1ABAD00E393E0 /* LaunchScreen.storyboard */,
@@ -192,7 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0346CFE51F004365008E6C42 /* Inceptionv3.mlmodel in Sources */,
+				035C30F31F0777B60093F287 /* Inceptionv3.mlmodel in Sources */,
 				03A474661EF1ABAD00E393E0 /* ViewController.swift in Sources */,
 				0313515B1F00391A00750619 /* Prediction.swift in Sources */,
 				03A474641EF1ABAD00E393E0 /* AppDelegate.swift in Sources */,
