@@ -128,7 +128,7 @@ extension ViewController: UITableViewDataSource {
         
         let predictionItem = predictionResult[indexPath.row]
         cell.textLabel?.text = predictionItem.name
-        cell.detailTextLabel?.text = "hola everyone" //"\(predictionItem.probability.roundTo(places: 2))"
+        cell.detailTextLabel?.text = "Prob: \(predictionItem.probability.roundTo(places: 2))"
         
         return cell
     }
