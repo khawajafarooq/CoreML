@@ -8,15 +8,25 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+enum LoadingState {
+    case Loading
+    case Finished
+}
 
+class ViewController: UIViewController, ActivityIndicatorPresenter {
+    var container: UIView = UIView()
+    var loadingView: UIView = UIView()
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var nextButton: UIButton!
     
     // ivars
     var i = 0
     var predictionResult: [Prediction] = []
+    var state: LoadingState = .Finished
     
     // ML model
     let model = Inceptionv3()
@@ -39,17 +49,28 @@ class ViewController: UIViewController {
     }
     
     fileprivate func loadUI() {
+        self.showActivityIndicator()
         if let img = loadNextImage() {
-            self.image.image = img
             
-            guard let prediction = predict(img) else {
-                return
+            DispatchQueue.global(qos: .default).async { [weak self] () -> Void in
+                guard let prediction = self?.predict(img) else {
+                    self?.updateUIState()
+                    return
+                }
+                
+                DispatchQueue.main.async() { [weak self] () -> Void in
+                    self?.image.image = img
+                    self?.displayResult(prediction)
+                    self?.updateUIState()
+                }
             }
-            
-            displayResult(prediction)
         }
-        
-        
+    }
+    
+    fileprivate func updateUIState() {
+        self.enableButton(flag: true)
+        self.state = .Finished
+        self.hideActivityIndicator()
     }
     
     fileprivate func loadNextImage() -> UIImage? {
@@ -97,11 +118,9 @@ class ViewController: UIViewController {
         
         let headerText = "I think it's a \(prediction.classLabel)"
         self.predictionResult = getPrediction(prediction.classLabelProbs)
+        self.headerLabel.text = headerText
+        self.tableView.reloadData()
         
-        DispatchQueue.main.async() { [weak self] () -> Void in
-            self?.headerLabel.text = headerText
-            self?.tableView.reloadData()
-        }
     }
     
     fileprivate func fatalError(error: String) {
@@ -113,7 +132,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func nextBtnAction(_ sender: Any) {
-        loadUI()
+        
+        enableButton(flag: false)
+        if self.state == .Finished {
+            self.state = .Loading
+            loadUI()
+        }
+    }
+    
+    fileprivate func enableButton(flag: Bool) {
+        self.nextButton.isEnabled = flag
     }
 }
 
@@ -136,4 +164,5 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Top 5 Predictions"
     }
+    
 }

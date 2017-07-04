@@ -97,6 +97,7 @@
                     <connections>
                         <outlet property="headerLabel" destination="vmq-dE-a4E" id="UbM-N2-Hri"/>
                         <outlet property="image" destination="AI4-9G-AUz" id="Nav-Nl-BVM"/>
+                        <outlet property="nextButton" destination="8CO-43-K4e" id="pwB-ch-1dR"/>
                         <outlet property="tableView" destination="98Y-hN-Tp4" id="iGU-Ht-G9x"/>
                     </connections>
                 </viewController>

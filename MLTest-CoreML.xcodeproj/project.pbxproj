@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		03068A721F0789140077EABA /* img5.png in Resources */ = {isa = PBXBuildFile; fileRef = 038020551EFFE45F002ACB93 /* img5.png */; };
-		03068A791F0794C10077EABA /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 03068A781F0794C10077EABA /* Inceptionv3.mlmodel */; };
 		0313515B1F00391A00750619 /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0313515A1F00391A00750619 /* Prediction.swift */; };
+		037EB4541F0A75390079B17D /* ActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EB4531F0A75390079B17D /* ActivityIndicatorPresenter.swift */; };
 		038020521EFFC7D1002ACB93 /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0380204F1EFFC727002ACB93 /* img1.png */; };
 		038020531EFFC7D1002ACB93 /* img2.png in Resources */ = {isa = PBXBuildFile; fileRef = 038020501EFFC727002ACB93 /* img2.png */; };
 		038020541EFFC7D1002ACB93 /* img3.png in Resources */ = {isa = PBXBuildFile; fileRef = 038020511EFFC727002ACB93 /* img3.png */; };
@@ -20,11 +20,12 @@
 		03A474691EF1ABAD00E393E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A474671EF1ABAD00E393E0 /* Main.storyboard */; };
 		03A4746B1EF1ABAD00E393E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A4746A1EF1ABAD00E393E0 /* Assets.xcassets */; };
 		03A4746E1EF1ABAD00E393E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A4746C1EF1ABAD00E393E0 /* LaunchScreen.storyboard */; };
+		03AB6BD71F0A663200A0170D /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 03AB6BD61F0A663200A0170D /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03068A781F0794C10077EABA /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Inceptionv3.mlmodel; path = ../../../../CoreMLUnsplash/UnsplashExplorer/Resources/Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		0313515A1F00391A00750619 /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
+		037EB4531F0A75390079B17D /* ActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
 		0380204F1EFFC727002ACB93 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img1.png; sourceTree = "<group>"; };
 		038020501EFFC727002ACB93 /* img2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img2.png; sourceTree = "<group>"; };
 		038020511EFFC727002ACB93 /* img3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img3.png; sourceTree = "<group>"; };
@@ -38,6 +39,7 @@
 		03A4746A1EF1ABAD00E393E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03A4746D1EF1ABAD00E393E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03A4746F1EF1ABAD00E393E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03AB6BD61F0A663200A0170D /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Inceptionv3.mlmodel; path = "../../../../CoreML_old/MLTest-CoreML/MLTest-CoreML/Resources/Inceptionv3.mlmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +68,7 @@
 		03068A741F078C480077EABA /* MLModel */ = {
 			isa = PBXGroup;
 			children = (
-				03068A781F0794C10077EABA /* Inceptionv3.mlmodel */,
+				03AB6BD61F0A663200A0170D /* Inceptionv3.mlmodel */,
 			);
 			path = MLModel;
 			sourceTree = "<group>";
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				0380205A1EFFE63F002ACB93 /* Extensions.swift */,
+				037EB4531F0A75390079B17D /* ActivityIndicatorPresenter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -212,8 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03068A791F0794C10077EABA /* Inceptionv3.mlmodel in Sources */,
+				03AB6BD71F0A663200A0170D /* Inceptionv3.mlmodel in Sources */,
 				03A474661EF1ABAD00E393E0 /* ViewController.swift in Sources */,
+				037EB4541F0A75390079B17D /* ActivityIndicatorPresenter.swift in Sources */,
 				0313515B1F00391A00750619 /* Prediction.swift in Sources */,
 				03A474641EF1ABAD00E393E0 /* AppDelegate.swift in Sources */,
 				0380205B1EFFE63F002ACB93 /* Extensions.swift in Sources */,
@@ -349,6 +353,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8TS22L53R5;
 				INFOPLIST_FILE = "MLTest-CoreML/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xmen.MLTest-CoreML";
@@ -362,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8TS22L53R5;
 				INFOPLIST_FILE = "MLTest-CoreML/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xmen.MLTest-CoreML";
