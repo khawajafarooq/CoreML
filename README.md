@@ -11,3 +11,10 @@ This app predicts dominant object(s) inside an image using Core ML framework. Fo
 
 ## Compatibility
 Verified that this repository's code works in XCode 9.0 beta with Swift 4.0
+
+## Author 🙏🏻
+**Web**: [Khawaja Farooq](http://khawajafarooq.github.io)
+
+**Twitter**: [@khfarooq](https://twitter.com/khfarooq)
+
+**Medium**: [@khfarooq](https://medium.com/@khfarooq)
