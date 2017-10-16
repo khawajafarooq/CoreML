@@ -1,4 +1,4 @@
-# CoreML
+# Image Classifier App
 This app predicts dominant object(s) inside an image using Core ML framework. For current example, I have used an opensource ml model **InceptionV3** which is used for object classification introduced by Apple in [WWDC 2017](https://developer.apple.com/machine-learning/).
 
 ## Setup
